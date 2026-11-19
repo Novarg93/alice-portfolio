@@ -4,7 +4,7 @@
     $title = $name.' — портфолио UI/UX-дизайнера';
     $description = 'Портфолио веб-дизайнера Алисы Шевцовой. Дизайн сайтов и веб-сервисов для e-commerce, избранные кейсы, навыки и опыт работы.';
     $canonicalUrl = rtrim(config('app.url'), '/').'/';
-    $previewImage = $canonicalUrl.'images/portfolio-preview.jpg';
+    $previewImage = $canonicalUrl.'images/portfolio-preview-v2.jpg';
     $previewAlt = 'Портрет Алисы Шевцовой и подпись «UI/UX-дизайнер» на тёмном фоне';
     $profile = [
         '@context' => 'https://schema.org',
