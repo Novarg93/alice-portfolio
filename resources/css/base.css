@@ -1,0 +1,122 @@
+:root {
+    --canvas: #141517;
+    --canvas-2: #1c1d20;
+    --dot: rgba(255, 255, 255, 0.07);
+    --paper: #f5f6f8;
+    --card: #ffffff;
+    --ink: #121314;
+    --muted: #747575;
+    --line: #d9dadc;
+    --chip: #f2f3f5;
+    --blue: #0077ff;
+    --blue-soft: #d6e0f2;
+    --on-dark: #e9eaec;
+    --on-dark-muted: #8c8e93;
+
+    --f-body: 'Golos Text', 'Segoe UI', Roboto, Arial, sans-serif;
+    --f-pixel: 'Terminalia', 'Courier New', monospace;
+
+    --r-card: 32px;
+    --r-inner: 24px;
+    --shadow:
+        0 1px 1.5px rgba(0, 0, 0, 0.04), 0 5px 2.5px rgba(0, 0, 0, 0.03), 0 10px 3px rgba(0, 0, 0, 0.02),
+        0 19px 3.5px rgba(0, 0, 0, 0.01);
+    color-scheme: light;
+}
+html,
+body,
+#app {
+    height: 100%;
+}
+body {
+    margin: 0;
+}
+body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--f-body);
+    font-size: 15px;
+    line-height: 1.24;
+    letter-spacing: -0.02em;
+    -webkit-font-smoothing: antialiased;
+}
+* {
+    box-sizing: border-box;
+}
+button {
+    font: inherit;
+    color: inherit;
+    letter-spacing: inherit;
+}
+h1,
+h2,
+h3 {
+    margin: 0;
+    font-weight: 500;
+    text-wrap: balance;
+}
+h1 {
+    font-size: 34px;
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+}
+h2 {
+    font-size: 29px;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+}
+h3 {
+    font-size: 20px;
+    letter-spacing: -0.02em;
+}
+p {
+    margin: 0;
+}
+::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+    background: transparent;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+    margin: 28px 0;
+}
+::-webkit-scrollbar-thumb {
+    background: #c9cbd0;
+    border: 5px solid transparent;
+    border-radius: 16px;
+    background-clip: padding-box;
+    min-height: 40px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #a9acb2;
+}
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+.modal-card {
+    scrollbar-gutter: stable;
+}
+.modal-card::-webkit-scrollbar {
+    width: 12px;
+}
+.modal-card::-webkit-scrollbar-track {
+    margin: 44px 0;
+}
+.modal-card::-webkit-scrollbar-thumb {
+    border-width: 3px;
+}
+@supports not selector(::-webkit-scrollbar) {
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: #c9cbd0 transparent;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}

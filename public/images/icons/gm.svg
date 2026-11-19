@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+<defs>
+<linearGradient id="gmg" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+<stop offset="0" stop-color="#1C7DFF"/>
+<stop offset=".55" stop-color="#7C6CF2"/>
+<stop offset="1" stop-color="#E06BA8"/>
+</linearGradient>
+</defs>
+<path fill="url(#gmg)" d="M12 24A14.304 14.304 0 0 0 0 12 14.304 14.304 0 0 0 12 0a14.305 14.305 0 0 0 12 12 14.305 14.305 0 0 0-12 12"/>
+</svg>

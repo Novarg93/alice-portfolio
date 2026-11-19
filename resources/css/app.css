@@ -1,0 +1,8 @@
+@layer theme, utilities;
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/utilities.css' layer(utilities) source('../js');
+@import './fonts.css';
+@import './base.css';
+@import './board.css';
+@import './sections.css';
+@import './preloader.css';

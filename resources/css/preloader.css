@@ -1,0 +1,87 @@
+.preload {
+    position: fixed;
+    inset: 0;
+    z-index: 2147483000;
+    display: grid;
+    place-items: center;
+    background: var(--canvas);
+    background-image: radial-gradient(var(--dot) 1px, transparent 1px);
+    background-size: 24px 24px;
+    transition:
+        opacity 0.6s cubic-bezier(0.6, 0, 0.2, 1) 0.15s,
+        visibility 0s linear 0.75s;
+}
+.preload.out {
+    opacity: 0;
+    visibility: hidden;
+}
+.preload .pl-core {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 96px;
+    height: 96px;
+    margin: -48px 0 0 -48px;
+    display: grid;
+    place-items: center;
+    will-change: transform;
+    transform: translate(50vw, 50vh);
+}
+@media (hover: hover) and (pointer: fine) {
+    .preload {
+        cursor: none;
+    }
+}
+.preload .pl-num {
+    font-family: var(--f-pixel);
+    font-size: 16px;
+    color: var(--on-dark-muted);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.01em;
+    transition: color 0.3s;
+    line-height: 1.22;
+}
+.preload.done .pl-num {
+    color: var(--on-dark);
+}
+.preload .pl-rays {
+    position: absolute;
+    inset: 0;
+    animation: plSpin 9s linear infinite;
+}
+.preload .pl-rays i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 2px;
+    height: 12px;
+    margin: -6px 0 0 -1px;
+    border-radius: 1px;
+    background: var(--on-dark);
+    transform: rotate(var(--a)) translateY(calc(-1 * var(--d, 34px)));
+    opacity: 0.25;
+    transition:
+        opacity 0.25s,
+        transform 0.55s cubic-bezier(0.5, 0, 0.2, 1);
+}
+.preload .pl-rays i.on {
+    opacity: 1;
+}
+.preload.done .pl-rays i {
+    --d: 64px;
+    opacity: 0;
+}
+@keyframes plSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+html.is-loading,
+html.is-loading body {
+    overflow: hidden;
+}
+@media (prefers-reduced-motion: reduce) {
+    .preload .pl-rays {
+        animation: none;
+    }
+}
