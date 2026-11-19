@@ -52,7 +52,7 @@ npm run test:browser
 
 Playwright starts Laravel on port 8000 when needed. Stop Vite before running the browser tests against the production build. To test a running application, set `PLAYWRIGHT_BASE_URL` to its URL. Set `PLAYWRIGHT_CHANNEL=chrome` to use the installed Chrome binary. The suite covers five viewport sizes, navigation, persisted drag positions, keyboard focus, case-study galleries, and hover and touch video playback.
 
-Laravel Boost is a development dependency. The project’s Codex configuration starts its MCP server with `php artisan boost:mcp`.
+Laravel Boost is a development dependency. Run `php artisan boost:install` and select Codex to generate the local configuration.
 
 ## Deploy
 

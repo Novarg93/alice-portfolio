@@ -28,3 +28,12 @@ Thumbs.db
 /test-results/
 /.env.*
 !/.env.example
+
+# Local AI tooling
+/.agents/
+/.codex/
+/AGENTS.md
+/boost.json
+
+# Inertia DevTools recordings
+/storage/inertia-devtools/
